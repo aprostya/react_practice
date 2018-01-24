@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'SEGA LOGO FONT';
+  font-style: normal;
+  font-weight: normal;
+  src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(45deg, red, blue);
+  transition: all 1.5s;
+  animation: bodychange 1.5s ease-in infinite alternate;
+}
+
+.cards-list {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+
+@media (min-width: 320px) {
+  .card-content {
+    max-width: 100%;
+  }
+}
+@media (min-width:660px) {
+  .card-content {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 960px) {
+  .card-content {
+    max-width: 24%;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-header__title {
+    text-align: center;
+    font-family: 'SEGA LOGO FONT', 'Arial', 'sans-serif';
+    letter-spacing: 11px;
+    font-size: 48px;
+    transition: all 3s;
+    animation: neon1 1.5s ease-out infinite alternate;
+  }
+}
+.search-form {
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+}
+
+@keyframes bodychange {
+  from {
+    background: linear-gradient(45deg, red, blue);
+  }
+  to {
+    background: linear-gradient(60deg, red, blue);
+  }
+}
